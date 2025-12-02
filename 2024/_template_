@@ -1,0 +1,30 @@
+from base import AoCBase
+from typing import List
+from re import findall
+
+
+class Day3(AoCBase):
+    def __init__(self):
+        super().__init__(2)  # Pass the day number to base class
+
+    def parse_input(self) -> List[str]:
+        """Override with specific parsing for this day."""
+        return self.raw_data.strip().split("\n")
+
+    def part1(self) -> int:
+        result = 0
+
+        for line in self.data:
+            pass
+        return result
+
+    def part2(self) -> int:
+        result = 0
+        for line in self.data:
+            pass
+        return result
+
+
+if __name__ == "__main__":
+    solution = Day3()
+    solution.solve()
