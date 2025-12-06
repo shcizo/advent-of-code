@@ -6,6 +6,8 @@ from .helpers import (
     read_ints,
     read_grid,
     read_blocks,
+    split_grid_on_cols,
+    to_digit_grids,
 )
 
 __all__ = [
@@ -14,4 +16,6 @@ __all__ = [
     "read_ints",
     "read_grid",
     "read_blocks",
+    "split_grid_on_cols",
+    "to_digit_grids",
 ]

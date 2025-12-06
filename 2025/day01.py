@@ -1,5 +1,6 @@
 """Day 1: Advent of Code 2025."""
 
+import time
 from aoc import read_lines, read_input
     
 def get_pointer(dial, move, pointer):
@@ -56,7 +57,14 @@ def part2(data):
 
 
 if __name__ == "__main__":
-    data = read_lines(1)  # or read_input(1), read_ints(1), read_grid(1)
+    data = read_lines(1)
 
-    print(f"Part 1: {part1(data)}")
-    print(f"Part 2: {part2(data)}")
+    t0 = time.perf_counter()
+    p1 = part1(data)
+    t1 = time.perf_counter()
+    print(f"Part 1: {p1}  ({(t1-t0)*1000:.2f} ms)")
+
+    t0 = time.perf_counter()
+    p2 = part2(data)
+    t1 = time.perf_counter()
+    print(f"Part 2: {p2}  ({(t1-t0)*1000:.2f} ms)")

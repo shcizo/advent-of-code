@@ -1,3 +1,4 @@
+import time
 from aoc import read_lines, read_input
 from aoc.helpers import read_lines_and_split
 
@@ -47,6 +48,14 @@ def part2(data):
     return sum(ids)
 
 if __name__ == "__main__":
-    data = read_lines_and_split(2, ",")  # or read_input(2), read_ints(2), read_grid(2)
-    print(f"Part 1: {part1(data)}")
-    print(f"Part 2: {part2(data)}")
+    data = read_lines_and_split(2, ",")
+
+    t0 = time.perf_counter()
+    p1 = part1(data)
+    t1 = time.perf_counter()
+    print(f"Part 1: {p1}  ({(t1-t0)*1000:.2f} ms)")
+
+    t0 = time.perf_counter()
+    p2 = part2(data)
+    t1 = time.perf_counter()
+    print(f"Part 2: {p2}  ({(t1-t0)*1000:.2f} ms)")
